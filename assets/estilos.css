@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Teko:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Teko';
+}
+
+
+:root {
+    --fonte-principal: 'Montserrat'
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var('--fonte-principal'), cursive;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+    max-width: 100%;
+}
+
+/*Navegação*/
+
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: #dda0dd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+#nav ul li { 
+    list-style: none;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#nav ul#menu li {
+    float: left;
+    border-radius: 8px;
+    margin-right: 72px;
+}
+
+#nav ul.right li {
+    float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#nav ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+}

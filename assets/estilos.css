@@ -26,9 +26,21 @@ nav ul {
     list-style: none;
 }
 
+nav ul li {
+    margin: 20px;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background-color: #00e7ad34;
+}
+
 nav li {
     display: inline;
     margin-right: 20px;
+    transition: all 0.5s ease;
 }
 
 nav a {
@@ -37,9 +49,11 @@ nav a {
     color: #ffffff;
 }
 
+section
+
 main {
     padding: 20px;
     overflow: hidden;
-}
+}                                                                                                                         
 
 

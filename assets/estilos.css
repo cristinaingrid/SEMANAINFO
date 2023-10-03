@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: var('--fonte-principal'), cursive;
+    font-family: var(--fonte-principal), cursive;
     background-color: white;
 }
 

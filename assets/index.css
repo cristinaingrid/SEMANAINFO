@@ -19,7 +19,7 @@ header {
     background-color:  #1a1e29;
     color: #fff9f9;
     text-align: center;
-    padding: 20px;
+    padding: 35px;
 }
 
 nav ul {
@@ -49,9 +49,19 @@ nav a {
     color: #ffffff;
 }
 
+.container {
+    align-items: ;
+}
+
 main {
     padding: 20px;
     overflow: hidden;
-}                                                                                                                         
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+}
 
 

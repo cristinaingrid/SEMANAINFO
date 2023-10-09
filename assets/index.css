@@ -16,10 +16,14 @@ body {
 }
 
 header {
-    background-color:  #1a1e29;
+    background-color: #1a1e29;
     color: #fff9f9;
     text-align: center;
     padding: 35px;
+}
+
+header:hover {
+    background: #2a2e38;
 }
 
 nav ul {
@@ -57,7 +61,5 @@ main {
 .logo {
     position: absolute;
     top: 5px;
-    left: 60px;
+    left: 50px;
 }
-
-

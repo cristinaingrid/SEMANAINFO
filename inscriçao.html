@@ -7,9 +7,28 @@
 
 <body>
     <h1>Formulário de Inscrição</h1>
-    <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+    <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post" id="inscriçao">
         <label for="nome">Nome Completo:</label>
         <input type="text" id="nome" name="nome" required><br><br>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var formulario = document.getElementById('inscriçao');
+                var campoTexto = document.getElementById('nome');
+
+                formulario.addEventListener('submit', function (event) {
+                    var texto = nome.value;
+
+                    var regex = /^[^\d]+$/;
+
+                    if (!regex.test(texto)) {
+                        alert('O campo não deve conter números.');
+                        event.preventDefault();
+                    }
+                });
+            });
+        </script>
+
 
         <label for="matricula">Matrícula do Aluno:</label>
         <input type="number" id="matricula" name="matricula" required><br><br>

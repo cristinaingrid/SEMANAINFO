@@ -38,10 +38,111 @@
             });
         </script>
 
-        <h2>Custos de Produtos Alímentícios</h2>
+<h2>Produtos Alimentícios</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário (R$)</th>
+            <th>Total (R$)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Café</td>
+            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+            <td><span class="total">0.00</span></td>
+        </tr>
+        <tr>
+            <td>Bolo</td>
+            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+            <td><span class="total">0.00</span></td>
+        </tr>
+        <tr>
+            <td>Cachorro-Quente</td>
+            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+            <td><span class="total">0.00</span></td>
+        </tr>
+    </tbody>
+</table>
 
-        <input type="submit" value="Enviar">
-    </form>
+<h2>Itens de Divulgação</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário (R$)</th>
+            <th>Total (R$)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Banners</td>
+            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+            <td><span class="total">0.00</span></td>
+        </tr>
+        <tr>
+            <td>Crachás</td>
+            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+            <td><span class="total">0.00</span></td>
+        </tr>
+        <tr>
+            <td>Camisetas</td>
+            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+            <td><span class="total">0.00</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<button id="calcularOrcamento" onclick="calcularOrcamento()">Calcular Orçamento</button>
+
+<div id="resultadoOrcamento">
+    <h2>Total de Produtos Alimentícios (R$): <span id="totalAlimenticios">0.00</span></h2>
+    <h2>Total de Divulgação (R$): <span id="totalDivulgacao">0.00</span></h2>
+    <h2>Total Geral (R$): <span id="totalGeral">0.00</span></h2>
+</div>
+
+<script>
+    function calcularTotal() {
+        var totalAlimenticios = 0;
+        var totalDivulgacao = 0;
+
+        var totalItens = document.querySelectorAll('.total');
+        var totalQuantidade = 0;
+        var totalPreco = 0;
+
+        totalItens.forEach(function(item) {
+            totalQuantidade = parseFloat(item.parentNode.parentNode.querySelector('.quantidade').value) || 0;
+            totalPreco = parseFloat(item.parentNode.parentNode.querySelector('.preco').value) || 0;
+            var itemTotal = totalQuantidade * totalPreco;
+            item.textContent = itemTotal.toFixed(2);
+
+            if (item.parentNode.parentNode.parentNode.previousSibling.textContent === 'Produtos Alimentícios') {
+                totalAlimenticios += itemTotal;
+            } else if (item.parentNode.parentNode.parentNode.previousSibling.textContent === 'Itens de Divulgação') {
+                totalDivulgacao += itemTotal;
+            }
+        });
+
+        document.getElementById('totalAlimenticios').textContent = totalAlimenticios.toFixed(2);
+        document.getElementById('totalDivulgacao').textContent = totalDivulgacao.toFixed(2);
+
+        var totalGeral = totalAlimenticios + totalDivulgacao;
+        document.getElementById('totalGeral').textContent = totalGeral.toFixed(2);
+    }
+
+    function calcularOrcamento() {
+        calcularTotal();
+    }
+</script>
 
 </body>
 

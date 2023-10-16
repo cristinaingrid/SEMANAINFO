@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 
 
@@ -21,9 +23,10 @@ body {
 header {
     background-color: #1a1e29;
     color: #fff9f9;
-    text-align: center;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    text-align: right;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-right: 5%;
 }
 
 header:hover {
@@ -59,7 +62,7 @@ nav a {
 
 .nome {
     position: absolute;
-    top: 3%;
+    top: 3.5%;
     left: 8%;
     font-family: 'Staatliches', 'cursive';
     font-size: 250%;
@@ -68,7 +71,8 @@ nav a {
 
 .logo {
     position: absolute;
-    top: 1.5%;
+    justify-content: flex-start;
+    top: 2%;
     left: 2%;
 }
 
@@ -92,8 +96,12 @@ nav a {
     background-color: #1a1e29;
     color: #fff9f9;
     text-align: center;
-    font-size: 15px;
+    font-size: 200%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'Montserrat', 'sans-serif';
 }
+
 
 /*slider*/
 

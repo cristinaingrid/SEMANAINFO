@@ -17,13 +17,13 @@
     <br>
 
     <form action="https://app.headlessforms.cloud/api/v1/form-submission/nkJtA1ewcj" method="post" id="participantes">
-        <label for="numero">Número de Participantes:</label>
-        <input type="text" id="camponumero" name="camponumero" required><br><br>
+        <label for="numeroParticipantes">Número de Participantes: </label>
+        <input type="number" id="numeroParticipantes" min="0" required><br><br>
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var formulario = document.getElementById('participantes');
-                var camponumero = document.getElementById('camponumero');
+                var camponumero = document.getElementById('numeroParticipantes');
 
                 formulario.addEventListener('submit', function (event) {
                     var valor = camponumero.value;
@@ -38,111 +38,149 @@
             });
         </script>
 
-<h2>Produtos Alimentícios</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Quantidade</th>
-            <th>Preço Unitário (R$)</th>
-            <th>Total (R$)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Café</td>
-            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
-            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
-            <td><span class="total">0.00</span></td>
-        </tr>
-        <tr>
-            <td>Bolo</td>
-            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
-            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
-            <td><span class="total">0.00</span></td>
-        </tr>
-        <tr>
-            <td>Cachorro-Quente</td>
-            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
-            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
-            <td><span class="total">0.00</span></td>
-        </tr>
-    </tbody>
-</table>
+        <h2>Custos de Produtos Alímenticios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produtos</th>
+                    <th>Quantidade por Participantes</th>
+                    <th>Preço por Unidade</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Café</td>
+                    <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+                    <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+                    <td><span class="total">0.00</span></td>
+                </tr>
+                <tr>
+                    <td>Bolo</td>
+                    <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+                    <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+                    <td><span class="total">0.00</span></td>
+                </tr>
+                <tr>
+                    <td>Cachorro-Quente</td>
+                    <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+                    <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+                    <td><span class="total">0.00</span></td>
+                </tr>
+            </tbody>
+        </table>
 
-<h2>Itens de Divulgação</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Quantidade</th>
-            <th>Preço Unitário (R$)</th>
-            <th>Total (R$)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Banners</td>
-            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
-            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
-            <td><span class="total">0.00</span></td>
-        </tr>
-        <tr>
-            <td>Crachás</td>
-            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
-            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
-            <td><span class="total">0.00</span></td>
-        </tr>
-        <tr>
-            <td>Camisetas</td>
-            <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
-            <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
-            <td><span class="total">0.00</span></td>
-        </tr>
-    </tbody>
-</table>
+        <h2>Custos de Itens de Divulgação</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                    <th>Preço por Unidade</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Banners</td>
+                    <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+                    <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+                    <td><span class="total">0.00</span></td>
+                </tr>
+                <tr>
+                    <td>Crachás</td>
+                    <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+                    <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+                    <td><span class="total">0.00</span></td>
+                </tr>
+                <tr>
+                    <td>Camisetas</td>
+                    <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
+                    <td><input type="number" class="preco" step="0.01" min="0" onchange="calcularTotal()"></td>
+                    <td><span class="total">0.00</span></td>
+                </tr>
+            </tbody>
+        </table>
 
-<button id="calcularOrcamento" onclick="calcularOrcamento()">Calcular Orçamento</button>
+        <button id="calcularOrcamento" onclick="calcularOrcamento()">Salvar Dados</button>
 
-<div id="resultadoOrcamento">
-    <h2>Total de Produtos Alimentícios (R$): <span id="totalAlimenticios">0.00</span></h2>
-    <h2>Total de Divulgação (R$): <span id="totalDivulgacao">0.00</span></h2>
-    <h2>Total Geral (R$): <span id="totalGeral">0.00</span></h2>
-</div>
+        <script>
+            function calcularTotal() {
+                var totalAlimenticios = 0;
+                var totalDivulgacao = 0;
 
-<script>
-    function calcularTotal() {
-        var totalAlimenticios = 0;
-        var totalDivulgacao = 0;
+                var totalItens = document.querySelectorAll('.total');
+                var totalQuantidade = 0;
+                var totalPreco = 0;
 
-        var totalItens = document.querySelectorAll('.total');
-        var totalQuantidade = 0;
-        var totalPreco = 0;
+                totalItens.forEach(function (item) {
+                    totalQuantidade = parseFloat(item.parentNode.parentNode.querySelector('.quantidade').value) || 0;
+                    totalPreco = parseFloat(item.parentNode.parentNode.querySelector('.preco').value) || 0;
+                    var itemTotal = totalQuantidade * totalPreco;
+                    item.textContent = itemTotal.toFixed(2);
 
-        totalItens.forEach(function(item) {
-            totalQuantidade = parseFloat(item.parentNode.parentNode.querySelector('.quantidade').value) || 0;
-            totalPreco = parseFloat(item.parentNode.parentNode.querySelector('.preco').value) || 0;
-            var itemTotal = totalQuantidade * totalPreco;
-            item.textContent = itemTotal.toFixed(2);
+                    if (item.parentNode.parentNode.parentNode.previousSibling.textContent === 'Produtos Alimentícios') {
+                        totalAlimenticios += itemTotal;
+                    } else if (item.parentNode.parentNode.parentNode.previousSibling.textContent === 'Itens de Divulgação') {
+                        totalDivulgacao += itemTotal;
+                    }
+                });
 
-            if (item.parentNode.parentNode.parentNode.previousSibling.textContent === 'Produtos Alimentícios') {
-                totalAlimenticios += itemTotal;
-            } else if (item.parentNode.parentNode.parentNode.previousSibling.textContent === 'Itens de Divulgação') {
-                totalDivulgacao += itemTotal;
+                document.getElementById('totalAlimenticios').textContent = totalAlimenticios.toFixed(2);
+                document.getElementById('totalDivulgacao').textContent = totalDivulgacao.toFixed(2);
+
+                var totalGeral = totalAlimenticios + totalDivulgacao;
+                document.getElementById('totalGeral').textContent = totalGeral.toFixed(2);
             }
-        });
 
-        document.getElementById('totalAlimenticios').textContent = totalAlimenticios.toFixed(2);
-        document.getElementById('totalDivulgacao').textContent = totalDivulgacao.toFixed(2);
+            function calcularOrcamento() {
+                calcularTotal();
+            }
+        </script>
 
-        var totalGeral = totalAlimenticios + totalDivulgacao;
-        document.getElementById('totalGeral').textContent = totalGeral.toFixed(2);
-    }
+        <h2>Custos Totais</h2>
 
-    function calcularOrcamento() {
-        calcularTotal();
-    }
-</script>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Produtos Alimentícios </td>
+                    <td><span id="totalAlimenticios">0.00</span></td>
+                </tr>
+
+                <tr>
+                    <td>Divulgação </td>
+                    <td><span id="totalDivulgacao">0.00</span></td>
+                </tr>
+
+                <tr>
+                    <td>Custo Total do Evento </td>
+                    <td><span id="totalGeral">0.00</span></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <script>
+            function Totalcalcular() {
+                var numeroParticipantes = parseFloat(document.getElementById('numeroParticipantes').value) || 0;
+
+                var Alimenticiostotal = parseFloat(document.getElementById('totalAlimenticios').textContent) || 0;
+                var Divulgacaototal = parseFloat(document.getElementById('totalDivulgacao').textContent) || 0;
+                var Geraltotal = (Alimenticiostotal + Divulgacaototal) * numeroParticipantes;
+                document.getElementById('Geraltotal').textContent = Geraltotal.toFixed(2);
+            }
+
+            document.getElementById('calcularOrcamento').addEventListener('click', Totalcalcular);
+        </script>
+
+
+        <button id="calcularOrcamento" onclick="calcularOrcamento()">Calcular Orçamento</button>
 
 </body>
 

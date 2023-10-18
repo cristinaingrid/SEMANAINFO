@@ -56,7 +56,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    font-size: 130%;
+    font-size: 160%;
     color: #ffffff;
 }
 
@@ -158,8 +158,8 @@ nav a {
     color: #fff9f9;
     text-align: center;
     font-size: 200%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 2%;
+    padding-bottom: 3%;
     font-family: 'Montserrat', 'sans-serif';
 }
 
@@ -171,7 +171,10 @@ nav a {
     height: 10%;
     position: relative;
     background: #242424;
-    overflow: hidden; 
+    overflow: hidden;
+    filter: brightness(70%);
+    border-radius: 0.5%;
+    background-color: #1a1e29;
 }
 
 .slider img {
@@ -214,7 +217,6 @@ nav a {
 
 .slider .arrow-right {
     right: 2%;
-
 }
 
 .slider .paginacao {

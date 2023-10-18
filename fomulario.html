@@ -168,17 +168,21 @@
 
         <script>
             function Totalcalcular() {
-                var numeroParticipantes = parseFloat(document.getElementById('numeroParticipantes').value) || 0;
+                function calcularTotalAlimenticio() {
+                    var numeroParticipantes = parseFloat(document.getElementById('numeroParticipantes').value) || 0;
 
-                var Alimenticiostotal = parseFloat(document.getElementById('totalAlimenticios').textContent) || 0;
-                var Divulgacaototal = parseFloat(document.getElementById('totalDivulgacao').textContent) || 0;
-                var Geraltotal = (Alimenticiostotal + Divulgacaototal) * numeroParticipantes;
-                document.getElementById('Geraltotal').textContent = Geraltotal.toFixed(2);
-            }
+                    var totalAlimenticioCafe = parseFloat(document.querySelector('td:contains("Café") + td span.total').textContent) || 0;
+                    var totalAlimenticioBolo = parseFloat(document.querySelector('td:contains("Bolo") + td span.total').textContent) || 0;
+                    var totalAlimenticioCachorroQuente = parseFloat(document.querySelector('td:contains("Cachorro-Quente") + td span.total').textContent) || 0;
+                    // Adicione mais itens alimentícios, se necessário
 
-            document.getElementById('calcularOrcamento').addEventListener('click', Totalcalcular);
+                    var totalAlimenticio = (totalAlimenticioCafe + totalAlimenticioBolo + totalAlimenticioCachorroQuente /* + outros itens */) * numeroParticipantes;
+
+                    document.getElementById('totalAlimenticios').textContent = totalAlimenticio.toFixed(2);
+                }
+
+                document.getElementById('calcularOrcamento').addEventListener('click', calcularTotalAlimenticio);}
         </script>
-
 
         <button id="calcularOrcamento" onclick="calcularOrcamento()">Calcular Orçamento</button>
 

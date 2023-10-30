@@ -206,6 +206,8 @@ nav a {
     margin: 20px;
     perspective: 1000px;
     justify-content: center;
+    display: inline-block;
+    margin-left: 5%;
 }
 
 .card_inner {

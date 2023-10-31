@@ -200,14 +200,17 @@ nav a {
     --text-color: #132d46;
 }
 
+.cronograma {
+    background-color: rgb(11, 167, 167);
+}
+
 .card {
-    width: 300px;
+    width: 700px;
     height: 450px;
-    margin: 20px;
+    margin: 25px;
     perspective: 1000px;
     justify-content: center;
-    display: inline-block;
-    margin-left: 5%;
+    display: flex;
 }
 
 .card_inner {
@@ -216,7 +219,9 @@ nav a {
     transition: transform .7s;
     transform-style: preserve-3d;
     cursor: pointer;
-    position: relative;
+    position: flex;
+    background-color: #fff;
+    border-radius: 7%;
 }
 
 .card_inner.flipped {
@@ -275,7 +280,7 @@ nav a {
 }
 
 .card_content {
-    height: 50%;
+    height: 100%;
     width: 100%;
     padding: 20px 20px;
     text-align: center;

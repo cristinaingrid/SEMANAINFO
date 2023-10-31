@@ -3,6 +3,7 @@
 
 <head>
     <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" href="assets/inscriçao.css">
 </head>
 
 <body>
@@ -61,12 +62,24 @@
             <option value="turma3A">Turma 3A</option>
             <option value="turma3B">Turma 3B</option>
         </select><br><br>
-</div></div>
+</div>
 
 <button type="submit" name="submit">Enviar</button>
     </form>
 </fieldset>
 </form>
-</body>
 
-</html>
+<div class="wrap">
+    <h1 class="register-title">Inscrição</h1>
+    <form class="register">
+       <div class="register-switch">
+          <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
+          <label for="sex_f" class="register-switch-label">Female</label>
+          <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
+          <label for="sex_m" class="register-switch-label">Male</label>
+       </div>
+       <input type="email" class="register-input" placeholder="Email address">
+       <input type="password" class="register-input" placeholder="Password">
+       <input type="submit" value="Create Account" class="register-button">
+    </form>
+ </div>

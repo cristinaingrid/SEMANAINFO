@@ -2,84 +2,41 @@
 <html>
 
 <head>
-    <title>Formulário de Inscrição</title>
     <link rel="stylesheet" href="assets/inscriçao.css">
 </head>
 
 <body>
-    <fieldset>
-    <h1>Formulário de Inscrição</h1>
     <br>
 
     <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post" id="inscriçao">
-        <label for="nome">Nome Completo</label>
-        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required><br><br>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var formulario = document.getElementById('inscriçao');
-                var campoTexto = document.getElementById('nome');
 
-                formulario.addEventListener('submit', function (event) {
-                    var texto = nome.value;
-
-                    var regex = /^[^\d]+$/;
-
-                    if (!regex.test(texto)) {
-                        alert('O campo "Nome Completo" não deve conter números.');
-                        event.preventDefault();
-                    }
-                });
-            });
-        </script>
-
- <div class="matricula">
-        <label for="matricula">Matrícula do Aluno</label>
-        <input type="number" id="matricula" name="matricula" placeholder="000000" required><br><br>
 </div>
-<div class="cpf">
-        <label for="cpf">CPF</label>
-        <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-            placeholder="Exemplo: 123.456.789-01"><br><br>
-</div>  
-        <div class="nome">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
-        </div><br>
-        
-        <div class="email">
-            <label for="e-mail">Email</label>
-            <input type="email" name="email" class="form_input" id="email" placeholder="seuemail@email.com" required>
-        </div><br>
-
-<div class="turma">
-        <label for="turma">Turma</label>
-        <select id="turma" name="turma" required>
-            <option value="turma1A">Turma 1A</option>
-            <option value="turma1B">Turma 1B</option>
-            <option value="turma2A">Turma 2A</option>
-            <option value="turma2B">Turma 2B</option>
-            <option value="turma3A">Turma 3A</option>
-            <option value="turma3B">Turma 3B</option>
-        </select><br><br>
-</div>
-
-<button type="submit" name="submit">Enviar</button>
     </form>
-</fieldset>
 </form>
 
 <div class="wrap">
     <h1 class="register-title">Inscrição</h1>
     <form class="register">
-       <div class="register-switch">
-          <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
-          <label for="sex_f" class="register-switch-label">Female</label>
-          <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
-          <label for="sex_m" class="register-switch-label">Male</label>
-       </div>
-       <input type="email" class="register-input" placeholder="Email address">
-       <input type="password" class="register-input" placeholder="Password">
-       <input type="submit" value="Create Account" class="register-button">
+       <div class="matricula">
+</div>
+<div class="cpf">
+</div>  
+       <input type="nome" class="register-input" placeholder="Nome Completo"required>
+       <input type="email" class="register-input" placeholder="seuemail@email.com"required>
+       <input class="register-input" type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            placeholder="Exemplo: 123.456.789-01">
+       <input type="matricula" class="register-input" placeholder="Matrícula"required>
+<div class="turma">
+    <label for="turma"></label>
+    <select class="register-input id="turma" name="turma" required>
+        <option value="turma1A">Turma 1A</option>
+        <option value="turma1B">Turma 1B</option>
+        <option value="turma2A">Turma 2A</option>
+        <option value="turma2B">Turma 2B</option>
+        <option value="turma3A">Turma 3A</option>
+        <option value="turma3B">Turma 3B</option>
+    </select>
+       <input type="submit" value="Enviar" class="register-button">
     </form>
  </div>

@@ -11,8 +11,8 @@
     <link rel="shortcut icon" href="assets/img/logotipo.png" type="image/x-icon">
 </head>
 
-<body>
-    <h1>Calculadora de Orçamento para o Evento SCI</h1>
+<body,>
+    <h1 class="register-title">Calculadora de Orçamento para o Evento SCI</h1>
     <h2>Dados do Evento</h2>
     <br>
 
@@ -39,7 +39,7 @@
         </script>
 
         <h2>Custos de Produtos Alímenticios</h2>
-        <table>
+        <table >
             <thead>
                 <tr>
                     <th>Produtos</th>
@@ -48,7 +48,7 @@
                     <th>Total</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="register-input">
                 <tr>
                     <td>Café</td>
                     <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
@@ -72,7 +72,7 @@
 
         <h2>Custos de Itens de Divulgação</h2>
         <table>
-            <thead>
+            <thead class="register-input">
                 <tr>
                     <th>Item</th>
                     <th>Quantidade</th>
@@ -80,7 +80,7 @@
                     <th>Total</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="register-input">
                 <tr>
                     <td>Banners</td>
                     <td><input type="number" class="quantidade" min="0" onchange="calcularTotal()"></td>
@@ -102,7 +102,7 @@
             </tbody>
         </table>
 
-        <button id="calcularOrcamento" onclick="calcularOrcamento()">Salvar Dados</button>
+        <button class="register-button" id="calcularOrcamento" onclick="calcularOrcamento()">Salvar Dados</button>
 
         <script>
             function calcularTotal() {
@@ -147,7 +147,7 @@
                     <th>Total</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="register-input">
                 <tr>
                     <td>Produtos Alimentícios </td>
                     <td><span id="totalAlimenticios">0.00</span></td>
@@ -184,7 +184,7 @@
                 document.getElementById('calcularOrcamento').addEventListener('click', calcularTotalAlimenticio);}
         </script>
 
-        <button id="calcularOrcamento" onclick="calcularOrcamento()">Calcular Orçamento</button>
+        <button class="register-button" id="calcularOrcamento" onclick="calcularOrcamento()">Calcular Orçamento</button>
 
 </body>
 

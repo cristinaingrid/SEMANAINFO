@@ -291,3 +291,30 @@ nav a {
     text-align: justify;
     color: var(--text-color);
 }
+
+/*cronograma*/
+#maratona img {
+    height: 200px;
+    }
+    
+#maratona h6 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px; 
+    color: #f8f8f8;
+    background-color: crimson;
+    border-radius: 0 0 8px 8px;
+    font-weight: normal;
+    padding: 5px;
+}
+    
+/* Ajuste nas imagens */
+    
+img {
+    width: 100%;
+}
+    
+img.img_ajuste {
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}

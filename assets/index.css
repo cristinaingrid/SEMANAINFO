@@ -17,7 +17,7 @@
 
 body {
     font-family: var(--fonte-principal), cursive;
-    background-color: white;
+    background-color:  rgb(11, 167, 167);
 }
 
 header {
@@ -292,26 +292,56 @@ nav a {
     color: var(--text-color);
 }
 
-/*cronograma*/
+/*maratona*/
+#maratona {
+    background-color: rgb(11, 167, 167);
+    align-items: center;
+    font-size: x-large;
+}
+
 #maratona img {
     height: 200px;
     }
+
     
 #maratona h6 {
     text-align: center;
     text-transform: uppercase;
     font-size: 18px; 
     color: #f8f8f8;
-    background-color: crimson;
+    background-color: #1a1e29;
     border-radius: 0 0 8px 8px;
     font-weight: normal;
     padding: 5px;
 }
     
-/* Ajuste nas imagens */
+img.img_ajuste {
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/*jogos*/
+
+#jogos {
+    background-color: rgb(11, 167, 167);
+    font-size: x-large;
+}
+
+#jogos img {
+    height: 400px;
+    align-items: center;
     
-img {
-    width: 100%;
+}
+    
+#jogos h6 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px; 
+    color: #f8f8f8;
+    background-color: #1a1e29;
+    border-radius: 0 0 8px 8px;
+    font-weight: normal;
+    padding: 5px;
 }
     
 img.img_ajuste {

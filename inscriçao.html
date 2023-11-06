@@ -8,37 +8,29 @@
 </head>
 
 <body>
-    <br>
-
     <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post" id="inscriçao">
+        <div class="wrap">
+            <h1 class="register-title">Inscrição</h1>
+            
+            <input type="nome" class="register-input" placeholder="Nome Completo" required>
+            <input type="email" class="register-input" placeholder="seuemail@email.com" required>
+            <input class="register-input" type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                placeholder="Exemplo: 123.456.789-01">
+            <input type="matricula" class="register-input" placeholder="Matrícula" required>
+            <div class="turma">
+                <label for="turma"></label>
+                <select class="register-input" id="turma" name="turma" required>
+                    <option value="turma1A">Info 1A</option>
+                    <option value="turma1B">Info 1B</option>
+                    <option value="turma2A">Info 2A</option>
+                    <option value="turma2B">Info 2B</option>
+                    <option value="turma3A">Info 3A</option>
+                    <option value="turma3B">Info 3B</option>
+                </select>
+                <input type="submit" value="Enviar" class="register-button">
+            </div>
 
-
-</div>
+        </div>
     </form>
-</form>
-
-<div class="wrap">
-    <h1 class="register-title">Inscrição</h1>
-    <form class="register">
-       <div class="matricula">
-</div>
-<div class="cpf">
-</div>  
-       <input type="nome" class="register-input" placeholder="Nome Completo"required>
-       <input type="email" class="register-input" placeholder="seuemail@email.com"required>
-       <input class="register-input" type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-            placeholder="Exemplo: 123.456.789-01">
-       <input type="matricula" class="register-input" placeholder="Matrícula"required>
-<div class="turma">
-    <label for="turma"></label>
-    <select class="register-input" id= "turma" name="turma" required>
-        <option value="turma1A">Info 1A</option>
-        <option value="turma1B">Info 1B</option>
-        <option value="turma2A">Info 2A</option>
-        <option value="turma2B">Info 2B</option>
-        <option value="turma3A">Info 3A</option>
-        <option value="turma3B">Info 3B</option>
-    </select>
-       <input type="submit" value="Enviar" class="register-button">
-    </form>
- </div>
+</body>
+</html>

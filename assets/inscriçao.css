@@ -24,6 +24,8 @@ body {
   width: 270px;
   height: 300px;
   text-align: center;
+  padding: 10px;
+  background-color: white;
 }
 
 .register-title {
